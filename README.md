@@ -1,0 +1,2 @@
+- clone project
+- npm install

@@ -1,0 +1,29 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emasdev/Restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emasdev/Restaurant/issues"
+  },
+  "homepage": "https://github.com/emasdev/Restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.20.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
+  }
+}
