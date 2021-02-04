@@ -12,20 +12,36 @@
 
 
   <link rel="stylesheet" href="css/styles.css">
-  <title>Restaurant</title>
+  <title></title>
 </head>
 
 <body>
-  <!-- Just an image -->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        Japanese Taco
-      </a>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-title" href="index.html">The Japanese Taco</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </div>
     </div>
   </nav>
-  <section>
-
+  <section class="section-home d-flex align-items-stretch h-100">
+    <div class="bg-img bg-img-1"></div>
+    <div class="bg-img bg-img-2"></div>
+    <div class="overlay bg-overlay d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column bg-main-circle text-center">
+        <h1 class="brand-title">The Japanese Taco</h1>
+        <hr>
+        <h2 class="brand-title">Gourmet japanese food with mexican recepies</h2>
+      </div>
+    </div>
   </section>
   <div id="content"></div>
 

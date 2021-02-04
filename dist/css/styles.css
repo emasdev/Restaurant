@@ -1,5 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
-.navbar-brand {
+body,
+html {
+  height: 100%;
+}
+.navbar-nav {
   font-family: "Kaushan Script", cursive;
+}
+
+.brand-title {
+  font-family: "Shadows Into Light", cursive;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-overlay {
+  background: rgb(139, 139, 139);
+  background: radial-gradient(
+    circle,
+    rgba(139, 139, 139, 0) 0%,
+    rgba(215, 215, 215, 1) 100%
+  );
+}
+
+.bg-main-circle {
+  background-color: white;
+  padding: 50px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 5px 16px 0px#838383, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 2px 5px 16px 0px#838383, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+/* Section home */
+.section-home {
+  display: flex;
+  align-items: stretch;
+}
+.section-home .bg-img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.section-home .bg-img-1 {
+  background-image: url("../img/mexican-food-menu-hand-drawn-vector-illustration.jpg");
+  background-size: 70%;
+}
+
+.section-home .bg-img-2 {
+  background-image: url("../img/6565.jpg");
+  background-size: 70%;
 }
