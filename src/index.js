@@ -1,1 +1,3 @@
-console.log("I'm on");
+// require("./styles.css")
+// import { bro } from './home';
+alert("Hello world");
