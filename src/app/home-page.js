@@ -5,12 +5,12 @@ export function generateHomeSection(parentNode) {
   let _tempNode;
 
   /* 
-  <section class="section" id="section-home">
+  <section class="section h-100" id="section-home">
   */
   let _childrenNode = add_node({
     parentNode: _parentNode,
     nodeName: "section",
-    className: "section",
+    className: "section h-100",
     id: "section-home",
   });
 
@@ -98,7 +98,7 @@ export function generateHomeSection(parentNode) {
   });
 
   /* 
-        <a href="menu.html" 
+        <a 
         class="link-secondary mt-4 select-menu" 
         data-section="contact">Check menu</a>
 
@@ -112,6 +112,4 @@ export function generateHomeSection(parentNode) {
       "data-section": "menu",
     },
   });
-
-  console.log(_childrenNode);
 }

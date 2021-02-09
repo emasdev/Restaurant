@@ -13,9 +13,12 @@ export function add_node(data) {
     this_node.id = data.id;
   }
 
-  if (data.href) {
-    this_node.href = data.href;
+  if (data.attributes) {
+    for (const [key, value] of Object.entries(data.attributes)) {
+      this_node.setAttribute(key, value);
+    }
   }
+
   data.parentNode.append(this_node);
   return this_node;
 }
