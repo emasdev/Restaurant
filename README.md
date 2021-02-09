@@ -8,7 +8,10 @@
 - Add home layout
 - Configure css and js into webconfig
 - Add navbar functionallity
+- generate html from javascript
+- generate header
+- generate home_page
 
 ## ToDo
 
-- Pass home to javascript
+- Fix menu items to work with click events
