@@ -7,6 +7,7 @@ html {
 }
 .navbar-nav {
   font-family: "Kaushan Script", cursive;
+  cursor: pointer;
 }
 
 .brand-title {
@@ -38,24 +39,28 @@ html {
   box-shadow: 2px 5px 16px 0px#838383, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
+.section {
+  padding-top: 56px;
+}
+
 /* Section home */
-.section-home {
+#section-home {
   display: flex;
   align-items: stretch;
 }
-.section-home .bg-img {
+#section-home .bg-img {
   height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: repeat;
 }
 
-.section-home .bg-img-1 {
+#section-home .bg-img-1 {
   background-image: url("../img/mexican-food-menu-hand-drawn-vector-illustration.jpg");
   background-size: 70%;
 }
 
-.section-home .bg-img-2 {
+#section-home .bg-img-2 {
   background-image: url("../img/6565.jpg");
   background-size: 70%;
 }

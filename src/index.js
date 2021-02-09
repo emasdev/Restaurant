@@ -1,3 +1,7 @@
-import "./css/styles.css"
+import "./css/styles.css";
+import { run } from "./app/app";
 import { bro } from './app/home-page';
-console.log(bro)
+
+window.onload = function() {
+  run();
+};

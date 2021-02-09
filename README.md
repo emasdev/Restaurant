@@ -7,6 +7,7 @@
 
 - Add home layout
 - Configure css and js into webconfig
+- Add navbar functionallity
 
 ## ToDo
 

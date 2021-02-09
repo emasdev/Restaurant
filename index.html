@@ -24,17 +24,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          <a class="nav-link" href="menu.html">Menu</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-        </div>
+        <ul class="navbar-nav" id="main-menu">
+          <li class="nav-link active" data-section="home">Home</li>
+          <li class="nav-link" data-section="menu" href="menu.html">Menu</li>
+          <li class="nav-link" data-section="contact" href="contact.html">Contact</li>
+        </ul>
       </div>
     </div>
   </nav>
-  <section class="section-home d-flex align-items-stretch h-100">
-    <div class="bg-img bg-img-1"></div>
-    <div class="bg-img bg-img-2"></div>
+  <section class="section" id="section-home">
+    <div class="overlay d-flex align-items-stretch">
+      <div class="bg-img h-100 bg-img-1"></div>
+      <div class="bg-img h-100 bg-img-2"></div>
+    </div>
     <div class="overlay bg-overlay d-flex justify-content-center align-items-center">
       <div class="d-flex flex-column bg-main-circle text-center">
         <h1 class="brand-title fw-bold">The Japanese Taco</h1>
@@ -44,6 +46,8 @@
       </div>
     </div>
   </section>
+  <section class="section d-none" id="section-menu">Menu</section>
+  <section class="section d-none" id="section-contact">Contact</section>
   <div id="content"></div>
 
   <!-- Optional JavaScript; choose one of the two! -->
