@@ -16,6 +16,5 @@
 
 ## ToDo
 
-- Fix menu items to work with click events
-
-- Add attr to select-menu items on header.js
+- Fix menu clicked from a
+- add animation to

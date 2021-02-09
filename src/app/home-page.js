@@ -98,9 +98,7 @@ export function generateHomeSection(parentNode) {
   });
 
   /* 
-        <a 
-        class="link-secondary mt-4 select-menu" 
-        data-section="contact">Check menu</a>
+        <a class="link-secondary mt-4 select-menu data-fromMenu="true">Check menu</a>
 
   */
   _childrenNode = add_node({
@@ -110,6 +108,7 @@ export function generateHomeSection(parentNode) {
     text: "Check menu",
     attributes: {
       "data-section": "menu",
+      "data-from-menu": true,
     },
   });
 }

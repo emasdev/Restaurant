@@ -14,6 +14,4 @@ export const generateMenuSection = parentNode => {
     id: "section-menu",
     text: "Menu",
   });
-
-  console.log(_parentNode);
 };

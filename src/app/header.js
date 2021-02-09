@@ -101,12 +101,13 @@ export function generateHeader(parentNode) {
   });
 
   /*
-    <li class="nav-link" data-section="menu">Menu</li>
+    <li class="nav-link select-menu" data-section="menu">Menu</li>
   */
   _childrenNode = add_node({
     parentNode: _parentNode,
     nodeName: "li",
     className: "nav-link select-menu",
+    id: "select-menu-menu",
     attributes: {
       "data-section": "menu",
     },

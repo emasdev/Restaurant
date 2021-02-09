@@ -14,6 +14,4 @@ export const generateContactSection = parentNode => {
     id: "section-contact",
     text: "Contact",
   });
-
-  console.log(_parentNode);
 };
