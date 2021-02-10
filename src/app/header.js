@@ -27,6 +27,7 @@ export function generateHeader(parentNode) {
     parentNode: _parentNode,
     nodeName: "a",
     className: "navbar-brand brand-title",
+    id: "navbar-logo",
     attributes: {
       href: "index.html",
     },

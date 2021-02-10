@@ -64,6 +64,7 @@ export function generateHomeSection(parentNode) {
     parentNode: _parentNode,
     nodeName: "div",
     className: "d-flex flex-column bg-main-circle text-center",
+    id: "slide-1",
   });
 
   _tempNode = _childrenNode;

@@ -1,4 +1,5 @@
 import "./css/styles.css";
+require("animate.css");
 import { run } from "./app/app";
 import { generateHeader } from "./app/header";
 import { generateHomeSection } from "./app/home-page";

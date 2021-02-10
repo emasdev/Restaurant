@@ -16,5 +16,5 @@
 
 ## ToDo
 
-- Fix menu clicked from a
-- add animation to
+- test animate.css
+- transitions > from home to menu
