@@ -47,23 +47,24 @@ html {
 }
 
 /* Section home */
-#section-home {
+.main-section {
   display: flex;
   align-items: stretch;
 }
-#section-home .bg-img {
+
+.main-section .bg-img {
   height: 100%;
   width: 100%;
   background-position: center;
   background-repeat: repeat;
 }
 
-#section-home .bg-img-1 {
+.main-section .bg-img-1 {
   background-image: url("../img/mexican-food-menu-hand-drawn-vector-illustration.jpg");
   background-size: 70%;
 }
 
-#section-home .bg-img-2 {
+.main-section .bg-img-2 {
   background-image: url("../img/6565.jpg");
   background-size: 70%;
 }

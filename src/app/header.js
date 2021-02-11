@@ -1,11 +1,11 @@
-import { add_node } from "./util/dom-nodes";
+import { addNode } from "./util/dom-nodes";
 
 export function generateHeader(parentNode) {
   let _parentNode = parentNode;
   let _tempNode;
 
   /* <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top"> */
-  let _childrenNode = add_node({
+  let _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "div",
     className: "navbar navbar-expand-sm navbar-light bg-light fixed-top",
@@ -14,7 +14,7 @@ export function generateHeader(parentNode) {
   _parentNode = _childrenNode;
 
   /* <div class="container-fluid"> */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "div",
     className: "container-fluid",
@@ -23,7 +23,7 @@ export function generateHeader(parentNode) {
   _parentNode = _childrenNode;
 
   /* <a class="navbar-brand brand-title" href="index.html">The Japanese Taco</a> */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "a",
     className: "navbar-brand brand-title",
@@ -38,7 +38,7 @@ export function generateHeader(parentNode) {
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "button",
     className: "navbar-toggler",
@@ -54,7 +54,7 @@ export function generateHeader(parentNode) {
 
   _tempNode = _childrenNode;
 
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _tempNode,
     nodeName: "span",
     className: "navbar-toggler-icon",
@@ -67,7 +67,7 @@ export function generateHeader(parentNode) {
   justify-content-end"
   id="navbarNavAltMarkup">
   */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "div",
     className: "collapse navbar-collapse justify-content-end",
@@ -79,7 +79,7 @@ export function generateHeader(parentNode) {
   /* 
   <ul class="navbar-nav" id="main-menu"></ul>
   */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "ul",
     className: "navbar-nav",
@@ -91,7 +91,7 @@ export function generateHeader(parentNode) {
   /*
     <li class="nav-link active" data-section="home">Home</li>
   */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "li",
     className: "nav-link select-menu active",
@@ -104,7 +104,7 @@ export function generateHeader(parentNode) {
   /*
     <li class="nav-link select-menu" data-section="menu">Menu</li>
   */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "li",
     className: "nav-link select-menu",
@@ -117,7 +117,7 @@ export function generateHeader(parentNode) {
   /*
     <li class="nav-link" data-section="contact">Contact</li>
   */
-  _childrenNode = add_node({
+  _childrenNode = addNode({
     parentNode: _parentNode,
     nodeName: "li",
     className: "nav-link select-menu",

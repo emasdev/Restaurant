@@ -2,15 +2,17 @@ import "./css/styles.css";
 require("animate.css");
 import { run } from "./app/app";
 import { generateHeader } from "./app/header";
-import { generateHomeSection } from "./app/home-page";
-import { generateMenuSection } from "./app/menu-page";
-import { generateContactSection } from "./app/contact-page";
+import { generateHomeSection } from "./app/pages/home-page";
+import { generateMenuSection } from "./app/pages/menu-page";
+import { generateContactSection } from "./app/pages/contact-page";
+import { generatePages } from "./app/pages";
 
 window.onload = function() {
-  generateHeader(document.body);
-  generateHomeSection(document.body);
-  generateMenuSection(document.body);
-  generateContactSection(document.body);
+  const content = document.getElementById("content");
+  // generateHeader(content);
+  // generateHomeSection(content);
+  // generateMenuSection(content);
+  // generateContactSection(content);
   run();
 
   //run();

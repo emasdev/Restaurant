@@ -16,5 +16,13 @@
 
 ## ToDo
 
-- test animate.css
+- transition inside section container
+- Separate sections view files
+  page loads the other 3
+
+- start with home-page
+
+- go to menu trigger click
+
 - transitions > from home to menu
+- transitions > from home to contact
