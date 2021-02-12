@@ -1,24 +1,25 @@
-export function addNode(data) {
-  if (!data.parentNode || !data.nodeName) return;
-  const _node = document.createElement(data.nodeName);
+export default function addNode(data) {
+  if (!data.parentNode || !data.nodeName) return false;
+  const node = document.createElement(data.nodeName);
   if (data.className) {
-    _node.className = data.className;
+    node.className = data.className;
   }
 
   if (data.text) {
-    _node.innerHTML = data.text;
+    node.innerHTML = data.text;
   }
 
   if (data.id) {
-    _node.id = data.id;
+    node.id = data.id;
   }
 
   if (data.attributes) {
+    /* eslint-disable no-restricted-syntax */
     for (const [key, value] of Object.entries(data.attributes)) {
-      _node.setAttribute(key, value);
+      node.setAttribute(key, value);
     }
   }
 
-  data.parentNode.append(_node);
-  return _node;
+  data.parentNode.append(node);
+  return node;
 }
