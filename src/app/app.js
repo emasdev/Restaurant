@@ -1,7 +1,7 @@
 import { playTransition } from "./util/animate-transitions";
 
 export const run = () => {
-  let sectionIndex = 0;
+  let sectionIndex = 1;
   const dom = {
     tabs: document.getElementsByClassName("select-menu"),
   };
@@ -10,14 +10,12 @@ export const run = () => {
   const logo = document.getElementById("navbar-logo");
   const menu = document.getElementById("main-menu");
   const slides = {
-    "slide-1": document.getElementById("slide-1"),
-    "slide-2": document.getElementById("slide-2"),
-    "slide-3": document.getElementById("slide-3"),
+    "slide-1": document.getElementById("section-1"),
+    "slide-2": document.getElementById("section-2"),
+    "slide-3": document.getElementById("section-3"),
   };
+
   const tabs = document.getElementsByClassName("select-menu");
-  const selectMenuTabs = {
-    menu: document.getElementById("select-menu-menu"),
-  };
 
   for (const tab of tabs) {
     tab.addEventListener("click", () => {
@@ -25,77 +23,60 @@ export const run = () => {
     });
   }
 
-  //scene(sectionIndex);
-  function scene(index) {
-    return new Promise((resolve, reject) => {
-      switch (sectionIndex) {
-        // Intro
-        case 0:
-          playTransition({
-            node: slides["slide-1"],
-            animation: "pulse",
-          }).then(() => {
-            resolve();
-          });
-          break;
-        // From left to right
-        case 1:
-          playTransition({
-            node: slides["slide-1"],
-            animation: "fadeOutLeft",
-          }).then(() => {
-            console.log("finished animation");
-            resolve();
-          });
-          break;
-
-        default:
-          resolve("error");
-          break;
-      }
+  //initAnimation();
+  function initAnimation() {
+    playTransition({
+      node: slides["slide-1"],
+      animation: "pulse",
     });
-
-    // logo.classList.add("animate__animated", "animate__pulse");
-    // logo.style.setProperty("--animate-duration", "2s");
-    // logo.addEventListener("animationend", () => {
-    //   this.classList.remove("animate__animated", "animate__pulse");
-    // });
-
-    // menu.classList.add("animate__animated", "animate__pulse");
-    // menu.style.setProperty("--animate-duration", "3s");
-    // menu.addEventListener("animationend", () => {
-    //   this.classList.remove("animate__animated", "animate__pulse");
-    // });
   }
 
   function clickTab(tab) {
-    const sectionName = tab.dataset.section;
-    const section = document.getElementById("section-" + sectionName);
-
+    const fromIndex = sectionIndex;
+    const toIndex = parseInt(tab.dataset.index);
+    if (fromIndex === toIndex) {
+      return;
+    }
     // 1.- Remove active tabs
     removeClassForElements(tabs, "active");
     // 2.- Check where button came from and active tab
     if (tab.dataset.fromMenu) {
-      selectMenuTabs.menu.classList.add("active");
+      document.getElementById("tab-2").classList.add("active");
     } else {
       tab.classList.add("active");
     }
 
-    if (sectionIndex == 0) {
-      sectionIndex = 1;
+    // console.log(`fromIndex: ${fromIndex} toIndex: ${toIndex}`);
+    const fromSection = document.getElementById("section-" + fromIndex);
+    const toSection = document.getElementById("section-" + toIndex);
+    //.- Select transition
+    if (fromIndex < toIndex) {
+      playTransition({
+        node: fromSection,
+        animation: "fadeOutLeft",
+      }).then(() => {
+        addClassForElements(sections, "d-none");
+        toSection.classList.remove("d-none");
+        playTransition({
+          node: toSection,
+          animation: "fadeInRight",
+        });
+      });
+    } else {
+      playTransition({
+        node: fromSection,
+        animation: "fadeOutRight",
+      }).then(() => {
+        addClassForElements(sections, "d-none");
+        toSection.classList.remove("d-none");
+        playTransition({
+          node: toSection,
+          animation: "fadeInLeft",
+        });
+      });
     }
-    console.log("algo por aca");
-    console.log(section);
-    addClassForElements(sections, "d-none");
-    section.classList.remove("d-none");
 
-    // scene(sectionIndex).then(() => {
-    //   addClassForElements(sections, "d-none");
-    //   // 4.- Show selected section
-    //   section.classList.remove("d-none");
-    // });
-    // 3.- Hide all sections
-    // 3.1 transitions > from home to menu
+    sectionIndex = toIndex;
   }
 
   function removeClassForElements(elements, className) {

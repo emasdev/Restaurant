@@ -5,66 +5,14 @@ export function generateHomeSection(parentNode) {
   let _tempNode;
 
   /* 
-  <section class="section h-100" id="section-home">
+    <div class="d-flex flex-column bg-main-circle text-center m-4 section" id="section-1">
+
   */
   let _childrenNode = addNode({
     parentNode: _parentNode,
-    nodeName: "section",
-    className: "section h-100",
-    id: "section-home",
-  });
-
-  _parentNode = _childrenNode;
-
-  /* 
-  <div class="overlay d-flex align-items-stretch">
-  */
-  _childrenNode = addNode({
-    parentNode: _parentNode,
     nodeName: "div",
-    className: "overlay d-flex align-items-stretch",
-  });
-
-  _tempNode = _childrenNode;
-
-  /* 
-    <div class="bg-img h-100 bg-img-1"></div>
-  */
-  _childrenNode = addNode({
-    parentNode: _tempNode,
-    nodeName: "div",
-    className: "bg-img h-100 bg-img-1",
-  });
-
-  /* 
-    <div class="bg-img h-100 bg-img-2"></div>
-  */
-  _childrenNode = addNode({
-    parentNode: _tempNode,
-    nodeName: "div",
-    className: "bg-img h-100 bg-img-2",
-  });
-
-  /* 
-    <div class="overlay bg-overlay d-flex justify-content-center align-items-center">
-  */
-  _childrenNode = addNode({
-    parentNode: _parentNode,
-    nodeName: "div",
-    className:
-      "overlay bg-overlay d-flex justify-content-center align-items-center",
-  });
-
-  _parentNode = _childrenNode;
-
-  /* 
-    <div class="d-flex flex-column bg-main-circle text-center">
-  */
-  _childrenNode = addNode({
-    parentNode: _parentNode,
-    nodeName: "div",
-    className: "d-flex flex-column bg-main-circle text-center",
-    id: "slide-1",
+    className: "d-flex flex-column bg-main-circle text-center m-4 section",
+    id: "section-1",
   });
 
   _tempNode = _childrenNode;
@@ -108,7 +56,7 @@ export function generateHomeSection(parentNode) {
     className: "link-secondary mt-4 select-menu",
     text: "Check menu",
     attributes: {
-      "data-section": "menu",
+      "data-index": "2",
       "data-from-menu": true,
     },
   });

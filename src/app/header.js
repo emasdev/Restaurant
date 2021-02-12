@@ -96,7 +96,7 @@ export function generateHeader(parentNode) {
     nodeName: "li",
     className: "nav-link select-menu active",
     attributes: {
-      "data-section": "home",
+      "data-index": "1",
     },
     text: "Home",
   });
@@ -110,7 +110,7 @@ export function generateHeader(parentNode) {
     className: "nav-link select-menu",
     id: "select-menu-menu",
     attributes: {
-      "data-section": "menu",
+      "data-index": "2",
     },
     text: "Menu",
   });
@@ -122,7 +122,7 @@ export function generateHeader(parentNode) {
     nodeName: "li",
     className: "nav-link select-menu",
     attributes: {
-      "data-section": "contact",
+      "data-index": "3",
     },
     text: "Contact",
   });
