@@ -1,10 +1,10 @@
 # Library
 
-> This project was about creating a website for a restaurant and generate the HTML using Javascript. Files are imported using Webpack
+> This project is a website for a restaurant that generates HTML using Javascript. Files are imported using Webpack
 
-- The Restaurant website is build with 3 main pages. (home, menu, contact).
+- The Restaurant website is built with 3 main pages. (home, menu, contact).
 
-- Utility script dom-nodes.js was created for making easeer to write the HTML from Javascript and also the animate-transitions.js script to make easier the animations and transitions between views.
+- Utility script dom-nodes.js was created for making it easier to write the HTML from Javascript and also the animate-transitions.js script to make easier the animations and transitions between views.
 
 ## Built With
 
