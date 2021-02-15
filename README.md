@@ -23,7 +23,7 @@
 
 ## Live Demo
 
-<a href= "https://rawcdn.githack.com/emasdev/Restaurant/feature/test/index.html" target="_blank">Live version</a>
+<a href= "https://rawcdn.githack.com/emasdev/Restaurant/feature/test/dist/index.html" target="_blank">Live version</a>
 
 ## Production steps
 
