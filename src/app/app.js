@@ -1,16 +1,16 @@
-import playTransition from "./util/animate-transitions";
+import playTransition from './util/animate-transitions';
 
 const run = () => {
   let sectionIndex = 1;
-  const sections = document.getElementsByClassName("section");
+  const sections = document.getElementsByClassName('section');
 
   const slides = {
-    "slide-1": document.getElementById("section-1"),
-    "slide-2": document.getElementById("section-2"),
-    "slide-3": document.getElementById("section-3"),
+    'slide-1': document.getElementById('section-1'),
+    'slide-2': document.getElementById('section-2'),
+    'slide-3': document.getElementById('section-3'),
   };
 
-  const tabs = document.getElementsByClassName("select-menu");
+  const tabs = document.getElementsByClassName('select-menu');
 
   function hasClass(element, className) {
     return ` ${element.className} `.indexOf(` ${className} `) > -1;
@@ -36,8 +36,8 @@ const run = () => {
 
   function initAnimation() {
     playTransition({
-      node: slides["slide-1"],
-      animation: "pulse",
+      node: slides['slide-1'],
+      animation: 'pulse',
     });
   }
   initAnimation();
@@ -49,12 +49,12 @@ const run = () => {
       return;
     }
     // 1.- Remove active tabs
-    removeClassForElements(tabs, "active");
+    removeClassForElements(tabs, 'active');
     // 2.- Check where button came from and active tab
     if (tab.dataset.fromMenu) {
-      document.getElementById("tab-2").classList.add("active");
+      document.getElementById('tab-2').classList.add('active');
     } else {
-      tab.classList.add("active");
+      tab.classList.add('active');
     }
 
     const fromSection = document.getElementById(`section-${fromIndex}`);
@@ -63,25 +63,25 @@ const run = () => {
     if (fromIndex < toIndex) {
       playTransition({
         node: fromSection,
-        animation: "fadeOutLeft",
+        animation: 'fadeOutLeft',
       }).then(() => {
-        addClassForElements(sections, "d-none");
-        toSection.classList.remove("d-none");
+        addClassForElements(sections, 'd-none');
+        toSection.classList.remove('d-none');
         playTransition({
           node: toSection,
-          animation: "fadeInRight",
+          animation: 'fadeInRight',
         });
       });
     } else {
       playTransition({
         node: fromSection,
-        animation: "fadeOutRight",
+        animation: 'fadeOutRight',
       }).then(() => {
-        addClassForElements(sections, "d-none");
-        toSection.classList.remove("d-none");
+        addClassForElements(sections, 'd-none');
+        toSection.classList.remove('d-none');
         playTransition({
           node: toSection,
-          animation: "fadeInLeft",
+          animation: 'fadeInLeft',
         });
       });
     }
@@ -91,7 +91,7 @@ const run = () => {
 
   for (let index = 0; index < tabs.length; index += 1) {
     const tab = tabs[index];
-    tab.addEventListener("click", () => {
+    tab.addEventListener('click', () => {
       clickTab(tab);
     });
   }
