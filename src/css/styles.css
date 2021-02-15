@@ -28,11 +28,12 @@ html {
 
 .bg-overlay {
   background: rgb(139, 139, 139);
-  background: radial-gradient(
-    circle,
-    rgba(139, 139, 139, 0) 0%,
-    rgba(215, 215, 215, 1) 100%
-  );
+  background:
+    radial-gradient(
+      circle,
+      rgba(139, 139, 139, 0) 0%,
+      rgba(215, 215, 215, 1) 100%
+    );
 }
 
 .bg-main-circle {

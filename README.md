@@ -36,6 +36,8 @@
 - generate menu_page
 - generate contact_page
 - add transitions
+- Fix linter errors
+- Add github actions
 
 ## Authors
 
