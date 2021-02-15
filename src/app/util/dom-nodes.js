@@ -1,4 +1,4 @@
-export default function addNode(data) {
+const addNode = data => {
   if (!data.parentNode || !data.nodeName) return false;
   const node = document.createElement(data.nodeName);
   if (data.className) {
@@ -22,4 +22,5 @@ export default function addNode(data) {
 
   data.parentNode.append(node);
   return node;
-}
+};
+export default addNode;
