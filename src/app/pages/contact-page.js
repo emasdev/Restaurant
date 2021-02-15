@@ -3,9 +3,6 @@ import addNode from '../util/dom-nodes';
 export default function generateContactSection(node) {
   let parentNode = node;
 
-  /*
-    <div class="d-flex flex-column bg-main-circle text-center section d-none m-4" id="section-3">
-  */
   let childrenNode = addNode({
     parentNode,
     nodeName: 'div',
@@ -14,18 +11,14 @@ export default function generateContactSection(node) {
     id: 'section-3',
   });
   parentNode = childrenNode;
-  /*
-    <h1 class="brand-title fw-bold">Contact</h1>
-  */
+
   childrenNode = addNode({
     parentNode,
     nodeName: 'h1',
     className: 'brand-title fw-bold',
     text: 'Contact',
   });
-  /*
-    <hr>
-  */
+
   childrenNode = addNode({
     parentNode,
     nodeName: 'hr',

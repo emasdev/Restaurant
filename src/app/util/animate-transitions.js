@@ -1,6 +1,4 @@
 const playTransition = data => new Promise(resolve => {
-  // console.log(data.animation);
-  // console.log(data.node);
   data.node.classList.add('animate__animated', `animate__${data.animation}`);
   data.node.addEventListener(
     'animationend',
